@@ -6,7 +6,7 @@ namespace ContactBook.Data
 {
     public class InMemoryContactData : IContactData
     {
-        List<Contact> contacts;
+        readonly List<Contact> contacts;
 
         public InMemoryContactData()
         {
