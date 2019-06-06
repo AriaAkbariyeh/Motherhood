@@ -2,3 +2,16 @@
 @model ListModel
 @{
 }
+
+<table class="table">
+    @foreach (var contact in Model.contacts)
+    {
+    <tr>
+        <td>@contact.Id</td>
+        <td>@contact.Name</td>
+        <td>@contact.Address</td>
+        <td>@contact.Nationality</td>
+        <td>@contact.Number</td>
+    </tr>
+    }
+</table>
