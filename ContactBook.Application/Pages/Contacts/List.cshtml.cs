@@ -11,9 +11,14 @@ namespace ContactBook.Application.Pages.Contacts
 {
     public class ListModel : PageModel
     {
+        
+
         private readonly IContactData contactData;
 
         public IEnumerable<Contact> contacts{ get; set; }
+
+        [BindProperty(SupportsGet =true)]
+        public string SearchTerm { get; set; }
 
         public ListModel(IContactData contactData)
         {
@@ -21,7 +26,8 @@ namespace ContactBook.Application.Pages.Contacts
         }
         public void OnGet()
         {
-            contacts = contactData.GetAll();
+            // TODO: Make Search Non Case-Sensetive!!
+            contacts = contactData.GetContactsByName(SearchTerm);
         }
     }
 }
