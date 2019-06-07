@@ -20,9 +20,14 @@ namespace ContactBook.Application.Pages.Contacts
             this.contactData = contactData;
         }
 
-        public void OnGet(int contactId)
+        public IActionResult OnGet(int contactId)
         {
             contact = contactData.GetContactById(contactId);
+            if(contact == null)
+            {
+                return RedirectToPage("./NotFound");
+            }
+            return Page();
         }
     }
 }
