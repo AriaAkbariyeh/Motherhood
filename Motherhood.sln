@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ContactBook", "ContactBook", "{003D5536-3717-4AFA-AD8B-E7734F803C4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactBook.Application", "ContactBook.Application\ContactBook.Application.csproj", "{EA6F6AFE-86EC-44BC-8D59-F9954E8DCD23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactBook.Application", "ContactBook.Application\ContactBook.Application.csproj", "{EA6F6AFE-86EC-44BC-8D59-F9954E8DCD23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactBook.Core", "ContactBook.Core\ContactBook.Core.csproj", "{40547C73-2AF7-4080-A175-8650F37661FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactBook.Core", "ContactBook.Core\ContactBook.Core.csproj", "{40547C73-2AF7-4080-A175-8650F37661FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactBook.Data", "ContactBook.Data\ContactBook.Data.csproj", "{9A7EC60E-67FD-4C30-AB3A-2E531F49EC14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactBook.Data", "ContactBook.Data\ContactBook.Data.csproj", "{9A7EC60E-67FD-4C30-AB3A-2E531F49EC14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

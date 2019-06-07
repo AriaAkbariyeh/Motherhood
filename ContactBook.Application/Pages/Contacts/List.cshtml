@@ -10,9 +10,7 @@
             <input type="search" class="form-control" asp-for="SearchTerm" />
             <span class="input-group-btn">
                 <button class="btn btn-default">
-                    <i class="glyphicon glyphicon-search">
-
-                    </i>
+                    <i class="glyphicon glyphicon-search"></i>
                 </button>
             </span>
         </div>
@@ -30,6 +28,14 @@
         <td>@contact.Address</td>
         <td>@contact.Nationality</td>
         <td>@contact.Number</td>
+        <td>
+            <a 
+                class="btn btn-lg"
+                asp-page="./Detail"
+                asp-route-contactId="@contact.Id">
+                <li class="glyphicon glyphicon-zoom-in" ></li>
+            </a>
+        </td>
     </tr>
     }
 </table>

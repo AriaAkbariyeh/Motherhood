@@ -19,6 +19,10 @@ namespace ContactBook.Data
             };
         }
 
+        public Contact GetContactById(int Id)
+        {
+            return contacts.SingleOrDefault(c => c.Id == Id);
+        }
 
         public IEnumerable<Contact> GetContactsByName(string name)
         {

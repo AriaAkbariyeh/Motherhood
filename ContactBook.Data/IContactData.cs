@@ -8,6 +8,7 @@ namespace ContactBook.Data
     public interface IContactData
     {
         IEnumerable<Contact> GetContactsByName(string name);
+        Contact GetContactById(int Id);
     }
 
 }
