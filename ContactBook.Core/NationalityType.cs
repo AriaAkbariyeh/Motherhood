@@ -2,6 +2,7 @@
 {
     public enum NationalityType
     {
+        Unknown,
         Iranian, 
         Polish,
         Russian,
