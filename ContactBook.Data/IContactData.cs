@@ -7,7 +7,7 @@ namespace ContactBook.Data
 {
     public interface IContactData
     {
-        IEnumerable<Contact> GetAll();
+        IEnumerable<Contact> GetContactsByName(string name);
     }
 
 }

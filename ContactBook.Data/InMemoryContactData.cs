@@ -19,13 +19,14 @@ namespace ContactBook.Data
             };
         }
 
-        public IEnumerable<Contact> GetAll()
+
+        public IEnumerable<Contact> GetContactsByName(string name)
         {
             return from c in contacts
+                   where string.IsNullOrEmpty(name) || c.Name.StartsWith(name)
                    orderby c.Name
                    select c;
         }
-
     }
 
 }
