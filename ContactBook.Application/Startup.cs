@@ -29,7 +29,9 @@ namespace ContactBook.Application
             {
                 options.UseSqlServer(Configuration.GetConnectionString("ContactBook"));
             });
-            services.AddSingleton<IContactData, InMemoryContactData>();
+
+
+            services.AddScoped<IContactData, SqlContactData>();
 
 
             services.Configure<CookiePolicyOptions>(options =>

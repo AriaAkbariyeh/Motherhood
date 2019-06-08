@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ContactBook.Data
 {
-    class SqlContactData : IContactData
+    public class SqlContactData : IContactData
     {
         private readonly ContactBookSqlDbContext db;
 
