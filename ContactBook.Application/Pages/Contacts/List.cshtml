@@ -29,11 +29,15 @@
         <td>@contact.Nationality</td>
         <td>@contact.Number</td>
         <td>
-            <a 
-                class="btn btn-lg"
-                asp-page="./Detail"
-                asp-route-contactId="@contact.Id">
-                <li class="glyphicon glyphicon-zoom-in" ></li>
+            <a class="btn btn-lg"
+               asp-page="./Detail"
+               asp-route-contactId="@contact.Id">
+                <li class="glyphicon glyphicon-zoom-in"></li>
+            </a>
+            <a class="btn btn-lg"
+               asp-page="./Edit"
+               asp-route-contactId="@contact.Id">
+                <li class="glyphicon glyphicon-edit"></li>
             </a>
         </td>
     </tr>

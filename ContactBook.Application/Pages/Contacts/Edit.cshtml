@@ -1,0 +1,34 @@
+﻿@page "{contactId:int}"
+@model ContactBook.Application.Pages.Contacts.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>You are about to edit @Model.contact.Name</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="contact.Id" />
+    <div class="form-group">
+        <label asp-for="contact.Name"></label>
+        <input asp-for="contact.Name" class="form-control" />
+        <span class="text-danger" asp-validation-for="contact.Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="contact.Number"></label>
+        <input asp-for="contact.Number" class="form-control" />
+        <span class="text-danger" asp-validation-for="contact.Number"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="contact.Address"></label>
+        <input asp-for="contact.Address" class="form-control" />
+        <span class="text-danger" asp-validation-for="contact.Address"></span>
+
+    </div>
+    <div class="form-group">
+        <label asp-for="contact.Nationality"></label>
+        <select class="form-control" asp-for="contact.Nationality" asp-items="Model.Nationalities"></select>
+        <span class="text-danger" asp-validation-for="contact.Nationality"></span>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

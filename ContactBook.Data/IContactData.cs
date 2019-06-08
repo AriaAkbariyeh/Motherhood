@@ -9,6 +9,10 @@ namespace ContactBook.Data
     {
         IEnumerable<Contact> GetContactsByName(string name);
         Contact GetContactById(int Id);
+
+        Contact Update(Contact updatedContact);
+
+        int Commit();
     }
 
 }

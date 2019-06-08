@@ -19,6 +19,11 @@ namespace ContactBook.Data
             };
         }
 
+        public int Commit()
+        {
+            return 1;
+        }
+
         public Contact GetContactById(int Id)
         {
             return contacts.SingleOrDefault(c => c.Id == Id);
@@ -31,6 +36,21 @@ namespace ContactBook.Data
                    orderby c.Name
                    select c;
         }
+
+        public Contact Update(Contact updatedContact)
+        {
+            var contact = contacts.SingleOrDefault(r => r.Id == updatedContact.Id);
+            if(contact != null)
+            {
+                contact.Name = updatedContact.Name;
+                contact.Address = updatedContact.Address;
+                contact.Number = updatedContact.Number;
+                contact.Nationality = updatedContact.Nationality;
+            }
+            return contact;
+        }
     }
+
+
 
 }
