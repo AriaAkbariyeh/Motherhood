@@ -6,8 +6,13 @@ using System.Text;
 
 namespace ContactBook.Data
 {
-    class ContactBookSqlDbContext : DbContext
+    public class ContactBookSqlDbContext : DbContext
     {
+        public ContactBookSqlDbContext(DbContextOptions<ContactBookSqlDbContext> options)
+            : base(options)
+        {
+
+        }
         public DbSet<Contact> contacts{ get; set; }
 
 

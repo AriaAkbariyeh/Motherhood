@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Microsoft.EntityFrameworkCore;
 
 namespace ContactBook.Application
 {
@@ -24,6 +25,10 @@ namespace ContactBook.Application
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContextPool<ContactBookSqlDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("ContactBook"));
+            });
             services.AddSingleton<IContactData, InMemoryContactData>();
 
 
