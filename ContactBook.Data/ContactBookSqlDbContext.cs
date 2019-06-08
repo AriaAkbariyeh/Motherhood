@@ -6,9 +6,9 @@ using System.Text;
 
 namespace ContactBook.Data
 {
-    public class ContactBookSqlDbContext : DbContext
+    public class ContactBookDbContext : DbContext
     {
-        public ContactBookSqlDbContext(DbContextOptions<ContactBookSqlDbContext> options)
+        public ContactBookDbContext(DbContextOptions<ContactBookDbContext> options)
             : base(options)
         {
 

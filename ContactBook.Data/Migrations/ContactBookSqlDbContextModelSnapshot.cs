@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ContactBook.Data.Migrations
 {
-    [DbContext(typeof(ContactBookSqlDbContext))]
+    [DbContext(typeof(ContactBookDbContext))]
     partial class ContactBookSqlDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

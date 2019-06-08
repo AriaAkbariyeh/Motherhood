@@ -9,9 +9,9 @@ namespace ContactBook.Data
 {
     public class SqlContactData : IContactData
     {
-        private readonly ContactBookSqlDbContext db;
+        private readonly ContactBookDbContext db;
 
-        public SqlContactData(ContactBookSqlDbContext db)
+        public SqlContactData(ContactBookDbContext db)
         {
             this.db = db;
         }

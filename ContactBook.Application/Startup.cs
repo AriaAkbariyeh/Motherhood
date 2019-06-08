@@ -25,7 +25,7 @@ namespace ContactBook.Application
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContextPool<ContactBookSqlDbContext>(options =>
+            services.AddDbContextPool<ContactBookDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("ContactBook"));
             });

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ContactBook.Data.Migrations
 {
-    [DbContext(typeof(ContactBookSqlDbContext))]
+    [DbContext(typeof(ContactBookDbContext))]
     [Migration("20190608110054_initialcreate")]
     partial class initialcreate
     {

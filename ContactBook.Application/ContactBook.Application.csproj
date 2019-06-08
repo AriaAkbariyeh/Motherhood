@@ -10,4 +10,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ContactBook.Data\ContactBook.Data.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\Contacts\C2\" />
+  </ItemGroup>
 </Project>
