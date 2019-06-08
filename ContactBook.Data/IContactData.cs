@@ -13,7 +13,10 @@ namespace ContactBook.Data
         Contact Update(Contact updatedContact);
 
         Contact Add(Contact contact);
-        
+
+        Contact Delete(int Id);
+
+
 
         int Commit();
     }

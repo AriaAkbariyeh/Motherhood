@@ -57,6 +57,17 @@ namespace ContactBook.Data
             }
             return contact;
         }
+
+        public Contact Delete(int Id)
+        {
+            var contact = contacts.SingleOrDefault(c => c.Id == Id);
+            if(contact != null)
+            {
+                contacts.Remove(contact);
+            }
+
+            return contact;
+        }
     }
 
 
