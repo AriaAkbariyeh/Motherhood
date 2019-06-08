@@ -32,12 +32,17 @@
             <a class="btn btn-lg"
                asp-page="./Detail"
                asp-route-contactId="@contact.Id">
-                <li class="glyphicon glyphicon-zoom-in"></li>
+                <i class="glyphicon glyphicon-zoom-in"></i>
             </a>
             <a class="btn btn-lg"
                asp-page="./Edit"
                asp-route-contactId="@contact.Id">
-                <li class="glyphicon glyphicon-edit"></li>
+                <i class="glyphicon glyphicon-edit"></i>
+            </a>
+            <a class="btn btn-lg"
+               asp-page="./Delete"
+               asp-route-contactId="@contact.Id">
+                <i class="glyphicon glyphicon-trash"></i>
             </a>
         </td>
     </tr>
