@@ -52,6 +52,11 @@ namespace ContactBook.Data
             return query;
         }
 
+        public int GetCountOfContacts()
+        {
+            return db.contacts.Count();
+        }
+
         public Contact Update(Contact updatedContact)
         {
             var entity = db.contacts.Attach(updatedContact);

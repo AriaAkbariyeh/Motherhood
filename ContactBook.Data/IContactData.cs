@@ -16,7 +16,7 @@ namespace ContactBook.Data
 
         Contact Delete(int Id);
 
-
+        int GetCountOfContacts();
 
         int Commit();
     }

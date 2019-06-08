@@ -68,6 +68,11 @@ namespace ContactBook.Data
 
             return contact;
         }
+
+        public int GetCountOfContacts()
+        {
+            return contacts.Count();
+        }
     }
 
 
