@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
 
 namespace ContactBook.Application
 {
@@ -36,6 +37,10 @@ namespace ContactBook.Application
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+            // Session and ItempDataProvider are required for TempData to work!
+            services.AddMvc().AddSessionStateTempDataProvider();
+            services.AddSingleton<ITempDataProvider, CookieTempDataProvider>();
+            services.AddSession();
 
         }
 
@@ -53,12 +58,18 @@ namespace ContactBook.Application
                 app.UseHsts();
             }
 
+            // Use Session to use Tempdata
+            app.UseMvc();
+            app.UseSession();
+            app.UseCookiePolicy();
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseCookiePolicy();
+           
 
-            app.UseMvc();
+        
+
+
 
         }
     }

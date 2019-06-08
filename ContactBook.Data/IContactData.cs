@@ -12,6 +12,9 @@ namespace ContactBook.Data
 
         Contact Update(Contact updatedContact);
 
+        Contact Add(Contact contact);
+        
+
         int Commit();
     }
 

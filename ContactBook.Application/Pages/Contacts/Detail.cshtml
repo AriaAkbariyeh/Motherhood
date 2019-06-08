@@ -7,6 +7,16 @@
 
 <h1>Contact Details</h1>
 
+@if (@Model.Message != null)
+{
+    <br />
+    <div class="alert alert-info">@Model.Message</div>
+    <br />
+}
+
+
+
+<p>ID : @Model.contact.Id</p>
 <p>Name : @Model.contact.Name</p>
 <p>Nationality : @Model.contact.Nationality</p>
 <p>Address : @Model.contact.Address</p>

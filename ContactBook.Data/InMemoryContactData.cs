@@ -24,6 +24,14 @@ namespace ContactBook.Data
             return 1;
         }
 
+        public Contact Add(Contact contact)
+        {
+
+            contact.Id = contacts.Max(r => r.Id) + 1;
+            contacts.Add(contact);
+            return contact;
+        }
+
         public Contact GetContactById(int Id)
         {
             return contacts.SingleOrDefault(c => c.Id == Id);

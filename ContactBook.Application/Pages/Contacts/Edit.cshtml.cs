@@ -26,11 +26,19 @@ namespace ContactBook.Application.Pages.Contacts
             this.contactData = contactData;
             this.htmlHelper = htmlHelper;
         }
-        public IActionResult OnGet(int contactId)
+        public IActionResult OnGet(int? contactId)
         {
             Nationalities = htmlHelper.GetEnumSelectList<NationalityType>();
-            contact = contactData.GetContactById(contactId);
-            if(contact == null)
+            if (contactId.HasValue)
+            {
+                contact = contactData.GetContactById(contactId.Value);
+            }
+            else
+            {
+                contact = new Contact();
+            }
+
+            if (contact == null)
             {
                 return RedirectToPage("./NotFound");
             }
@@ -39,14 +47,28 @@ namespace ContactBook.Application.Pages.Contacts
 
         public IActionResult OnPost()
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
+            {
+                Nationalities = htmlHelper.GetEnumSelectList<NationalityType>();
+                return Page();
+            }
+            if(contact.Id > 0)
             {
                 contactData.Update(contact);
-                contactData.Commit();
+                TempData["Message"] = "Contact has been updated.";
+
+            }
+            else
+            {
+                contactData.Add(contact);
+                TempData["Message"] = "New Contact has been created.";
             }
 
-            Nationalities = htmlHelper.GetEnumSelectList<NationalityType>();
+            contactData.Commit();
             return RedirectToPage("./Detail", new { contactId = contact.Id });
+
+
+
         }
     }
 }
