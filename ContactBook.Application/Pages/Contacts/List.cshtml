@@ -20,33 +20,9 @@
 </form>
 
 
-<table class="table">
-    @foreach (var contact in Model.contacts)
-    {
-    <tr>
-        <td>@contact.Name</td>
-        <td>@contact.Address</td>
-        <td>@contact.Nationality</td>
-        <td>@contact.Number</td>
-        <td>
-            <a class="btn btn-lg"
-               asp-page="./Detail"
-               asp-route-contactId="@contact.Id">
-                <i class="glyphicon glyphicon-zoom-in"></i>
-            </a>
-            <a class="btn btn-lg"
-               asp-page="./Edit"
-               asp-route-contactId="@contact.Id">
-                <i class="glyphicon glyphicon-edit"></i>
-            </a>
-            <a class="btn btn-lg"
-               asp-page="./Delete"
-               asp-route-contactId="@contact.Id">
-                <i class="glyphicon glyphicon-trash"></i>
-            </a>
-        </td>
-    </tr>
-    }
-</table>
+@foreach(var contact in Model.contacts)
+{
+    <partial name="_Summary" model="contact"/>
+}
 
 <a asp-page="./Edit" class="btn btn-primary">Create New Contact</a>
