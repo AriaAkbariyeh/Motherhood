@@ -1,0 +1,22 @@
+﻿@page
+@model ContactBook.Application.Pages.Contacts.ClientContactBookModel
+@{
+    ViewData["Title"] = "ClientContactBook";
+}
+
+<h2>Client ContactBook</h2>
+
+@section Scripts {
+    <script>
+        $(function() {
+
+            $.ajax("/api/contacts/",
+                { method: "get" })
+                .then(function (response) {
+                    console.dir(response);
+                });
+        });
+    </script>
+}
+
+
