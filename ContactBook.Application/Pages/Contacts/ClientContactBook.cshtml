@@ -6,22 +6,31 @@
 
 <h2>Client ContactBook</h2>
 
+<table class="table" id="contacts">
+ 
+</table>
+
 @section Scripts {
 
     <script src="~/node_modules/datatables.net/js/jquery.dataTables.js"></script>
     <script src="~/node_modules/datatables.net-bs/js/dataTables.bootstrap.js"></script>
     <link href="~/node_modules/datatables.net-bs/css/dataTables.bootstrap.css" rel="stylesheet" />
 
-}
-
-@section Scripts {
     <script>
         $(function () {
 
             $.ajax("/api/contacts/",
                 { method: "get" })
                 .then(function (response) {
-                    console.dir(response);
+                    $("#contacts").dataTable({
+                        data: response,
+                        columns: [
+                            { "data": "name" },
+                            { "data": "number" },
+                            { "data": "address" },
+                            { "data": "nationality" }
+                        ]
+                    });
                 });
         });
     </script>
