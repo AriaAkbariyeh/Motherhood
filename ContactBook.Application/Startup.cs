@@ -66,6 +66,7 @@ namespace ContactBook.Application
             }
 
             // Use Session to use Tempdata
+            app.UseNodeModules(env);
             app.UseMvc();
             app.UseSession();
             app.UseCookiePolicy();
