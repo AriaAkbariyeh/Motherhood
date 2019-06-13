@@ -7,8 +7,16 @@
 <h2>Client ContactBook</h2>
 
 @section Scripts {
+
+    <script src="~/node_modules/datatables.net/js/jquery.dataTables.js"></script>
+    <script src="~/node_modules/datatables.net-bs/js/dataTables.bootstrap.js"></script>
+    <link href="~/node_modules/datatables.net-bs/css/dataTables.bootstrap.css" rel="stylesheet" />
+
+}
+
+@section Scripts {
     <script>
-        $(function() {
+        $(function () {
 
             $.ajax("/api/contacts/",
                 { method: "get" })
