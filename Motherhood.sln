@@ -27,6 +27,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebServices", "WebServices"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleService", "PeopleService\PeopleService.csproj", "{0A924956-575A-43DC-ACE4-930A79FAD456}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebForms", "WebForms", "{6B6D7F42-2362-472F-91CE-357C30B3205E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFormsTraining", "WebFormsTraining\WebFormsTraining.csproj", "{34B46609-8360-47C9-BDB4-1647B0A2C862}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +65,10 @@ Global
 		{0A924956-575A-43DC-ACE4-930A79FAD456}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A924956-575A-43DC-ACE4-930A79FAD456}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A924956-575A-43DC-ACE4-930A79FAD456}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34B46609-8360-47C9-BDB4-1647B0A2C862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34B46609-8360-47C9-BDB4-1647B0A2C862}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34B46609-8360-47C9-BDB4-1647B0A2C862}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34B46609-8360-47C9-BDB4-1647B0A2C862}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +81,7 @@ Global
 		{537086EA-C6A2-4256-B3CD-A6ABCF2EF0BF} = {A41E5ECF-EA75-4DDC-A9D1-640030828CE1}
 		{1D4B99B8-1C38-4801-BA8D-A3CFAB863A4F} = {907E246A-9D4D-4366-9BA3-927F143B0BEC}
 		{0A924956-575A-43DC-ACE4-930A79FAD456} = {F1FD5467-311A-480C-ACA1-8A0B3B55F9F7}
+		{34B46609-8360-47C9-BDB4-1647B0A2C862} = {6B6D7F42-2362-472F-91CE-357C30B3205E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D1B37316-41CD-47F0-84E3-42556D271CFF}
